@@ -210,7 +210,7 @@ const DraftEditor: React.FC<DraftEditorProps> = React.memo(
     return (
       <div
         style={{
-          width: "100%",
+          width: "90%",
           //   position: "relative",
           flexDirection: "column",
           display: "flex",
@@ -267,9 +267,15 @@ const DraftEditor: React.FC<DraftEditorProps> = React.memo(
           </div>
         </div>
 
-        {/* Button Container */}
-        <div style={{ position: "absolute", bottom: "20px", right: "80px" }}>
-          <button type="submit" className="embed-button">
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "flex-end",
+            marginTop: "20px",
+            marginRight: "25px",
+          }}
+        >
+          <button type="submit" className="post-button">
             Post
           </button>
         </div>
