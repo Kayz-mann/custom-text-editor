@@ -208,54 +208,70 @@ const DraftEditor: React.FC<DraftEditorProps> = React.memo(
     };
 
     return (
-      <div className="editor-outer-container">
-        <input
-          type="text"
-          placeholder="Add a title"
-          className={`title-input ${isTitleFocused ? "focused" : ""}`}
-          value={title}
-          onChange={handleTitleChange}
-          onFocus={handleTitleFocus}
-          onBlur={handleTitleBlur}
-          onKeyDown={handleKeyDown}
-          aria-label="Title input"
-        />
-        <div style={{ marginTop: "10px" }} />
-        <div style={{ position: "relative" }}>
-          <JoditEditor
-            ref={editor}
-            value={value}
-            config={config}
-            onBlur={handleBlur}
-            onChange={handleChange}
-            {...rest}
+      <div
+        style={{
+          width: "100%",
+          //   position: "relative",
+          flexDirection: "column",
+          display: "flex",
+        }}
+      >
+        <div className="editor-outer-container">
+          <input
+            type="text"
+            placeholder="Add a title"
+            className={`title-input ${isTitleFocused ? "focused" : ""}`}
+            value={title}
+            onChange={handleTitleChange}
+            onFocus={handleTitleFocus}
+            onBlur={handleTitleBlur}
+            onKeyDown={handleKeyDown}
+            aria-label="Title input"
           />
-          <button
-            className="circle-button"
-            onClick={toggleMenu}
-            aria-label="Insert options"
-          >
-            +
-          </button>
-          {isMenuOpen && (
-            <MenuOptions
-              onInsertImage={handleInsertImage}
-              onInsertVideo={handleInsertVideo}
-              onInsertSocialLink={handleInsertSocialLink}
+          <div style={{ marginTop: "10px" }} />
+          <div style={{ position: "relative" }}>
+            <JoditEditor
+              ref={editor}
+              value={value}
+              config={config}
+              onBlur={handleBlur}
+              onChange={handleChange}
+              {...rest}
             />
-          )}
+            <button
+              className="circle-button"
+              onClick={toggleMenu}
+              aria-label="Insert options"
+            >
+              +
+            </button>
+            {isMenuOpen && (
+              <MenuOptions
+                onInsertImage={handleInsertImage}
+                onInsertVideo={handleInsertVideo}
+                onInsertSocialLink={handleInsertSocialLink}
+              />
+            )}
+          </div>
+
+          <Modal
+            isOpen={isModalOpen}
+            onClose={handleCloseModal}
+            onEmbed={handleEmbed}
+            formType={modalFormType}
+          />
+
+          {/* Footer with word count */}
+          <div className="counter">
+            <div className="word-counter">{wordCount}/1000</div>
+          </div>
         </div>
 
-        <Modal
-          isOpen={isModalOpen}
-          onClose={handleCloseModal}
-          onEmbed={handleEmbed}
-          formType={modalFormType}
-        />
-
-        {/* Footer with word count */}
-        <div className="counter">
-          <div className="word-counter">{wordCount}/1000</div>
+        {/* Button Container */}
+        <div style={{ position: "absolute", bottom: "20px", right: "80px" }}>
+          <button type="submit" className="embed-button">
+            Post
+          </button>
         </div>
       </div>
     );
