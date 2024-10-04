@@ -38,6 +38,7 @@ const DraftEditor: React.FC<DraftEditorProps> = React.memo(
     const [modalFormType, setModalFormType] = useState<
       "video" | "image" | "link" | null
     >(null);
+    const [wordCount, setWordCount] = useState(0);
 
     const debouncedOnChange = useCallback(
       (newContent: string) => {
@@ -106,6 +107,10 @@ const DraftEditor: React.FC<DraftEditorProps> = React.memo(
     const handleChange = useCallback(
       (newContent: string) => {
         debouncedOnChange(newContent);
+
+        // Calculate word count
+        const words = newContent.trim().split(/\s+/).filter(Boolean);
+        setWordCount(words.length);
       },
       [debouncedOnChange]
     );
@@ -203,7 +208,7 @@ const DraftEditor: React.FC<DraftEditorProps> = React.memo(
     };
 
     return (
-      <div className="custom-editor-container">
+      <div className="editor-outer-container">
         <input
           type="text"
           placeholder="Add a title"
@@ -247,6 +252,9 @@ const DraftEditor: React.FC<DraftEditorProps> = React.memo(
           onEmbed={handleEmbed}
           formType={modalFormType}
         />
+
+        {/* Footer with word count */}
+        <div className="word-counter">{wordCount}/1000</div>
       </div>
     );
   }

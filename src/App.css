@@ -75,13 +75,14 @@
 .jodit-container {
   box-shadow: none; /* Removes any shadow that might appear as a border */
   border: none !important;
+  background-color: transparent !important;
 }
 
 /* Toolbar box styling */
 .jodit-toolbar__box {
   display: flex;
   justify-content: flex-start !important; /* Align items to the start */
-  background-color: #fff !important; /* Set background color to white */
+
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important; /* Add a soft shadow */
   padding: 8px 12px !important; /* Inner padding */
   width: auto !important; /* Adjust width to content */
@@ -109,7 +110,7 @@
   min-height: 200px; /* Set a minimum height for the editor */
   width: 100%; /* Full width of the parent container */
   box-sizing: border-box; /* Include padding and border in the element's total width and height */
-  background-color: #f5f5f6; /* Optional: background color */
+  background-color: #F0F0F0; /* Optional: background color */
 }
 
 .title-input {
@@ -277,6 +278,32 @@
   align-items: center;
   background-color: #F7FCF9;
 }
+
+.editor-outer-container {
+  border: 1px solid #ccc;
+  padding: 30px;
+  position: relative;
+  margin: 20px auto;
+  width: 80%;
+  border-radius: 8px;
+}
+
+.word-counter {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+/* .title-input.focused {
+  outline: 2px solid #007BFF;
+} */
+
+
+
+
+
 
 
 
