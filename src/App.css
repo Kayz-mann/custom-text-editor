@@ -1,0 +1,281 @@
+/* Main editor container styling */
+
+.App {
+  display: block;
+  place-items: center;
+  align-items: center;
+  justify-content: center;
+}
+.custom-editor-container {
+  max-width: 800px; /* Adjust width to fit the design */
+  margin: 0 auto; /* Center the editor horizontally */
+  background-color: #F5F5F6;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  
+}
+
+/* Title styling within the editor */
+.custom-editor-container h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+/* Editor text styling */
+.custom-editor-container .jodit-wysiwyg p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+  border: none !important;
+  background-color: transparent !important;
+}
+
+/* Toolbar styling */
+.custom-editor-container .jodit-toolbar {
+  max-width: 50%;
+  margin: 0 0 16px; /* Remove centering to align to the left */
+  display: flex; /* Flexbox for the toolbar layout */
+  flex-direction: column; /* Stack items vertically */
+  align-items: flex-start; /* Align items to the start */
+  padding-left: 20%; /* Add 20% left padding */
+}
+
+/* Media styling for embedded images/videos */
+.custom-editor-container iframe,
+.custom-editor-container img,
+.custom-editor-container video {
+  display: block;
+  max-width: 100%;
+  margin: 16px auto;
+  /* border-radius: 8px; */
+}
+
+/* Remove border around the editor workspace */
+.custom-editor-container .jodit-workplace {
+  border: none !important;
+  padding: 0;
+}
+
+/* Hide the status bar */
+.custom-editor-container .jodit-status-bar {
+  display: none;
+}
+
+.jodit-react-container {
+  border: none !important;
+}
+
+.jodit-container {
+  box-shadow: none; /* Removes any shadow that might appear as a border */
+  border: none !important;
+}
+
+/* Toolbar box styling */
+.jodit-toolbar__box {
+  display: flex;
+  justify-content: flex-start !important; /* Align items to the start */
+  background-color: #fff !important; /* Set background color to white */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important; /* Add a soft shadow */
+  padding: 8px 12px !important; /* Inner padding */
+  width: auto !important; /* Adjust width to content */
+  max-width: 60% !important; /* Optional: Restrict maximum width */
+  margin: 0 !important; /* Remove margin to align to the left */
+  border-radius: 8px !important; /* Optional: Rounded corners */
+  border: 1px solid #cecece !important; 
+}
+
+/* Styling for toolbox items */
+.jodit-toolbar-editor-collection,
+.jodit-toolbar-editor-collection_mode_horizontal {
+  padding: 4px; /* Add padding inside toolbox items */
+  margin-right: 4px; /* Optional: Space between items */
+  border-radius: 8px; /* Optional: Rounded corners */
+}
+
+/* Ensure toolbar width doesn't stretch across the entire editor */
+.jodit-container .jodit .jodit_theme_default .jodit-wysiwyg_mode {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.jodit-wysiwyg {
+  min-height: 200px; /* Set a minimum height for the editor */
+  width: 100%; /* Full width of the parent container */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  background-color: #f5f5f6; /* Optional: background color */
+}
+
+.title-input {
+  width: 100%; /* Full width of the container */
+  font-size: 44px !important; /* Font size for the title */
+  font-weight: bold; /* Bold text */
+  padding: 12px; /* Padding inside the input */
+  border-radius: 4px; /* Rounded corners */
+  margin-bottom: 16px; /* Space below the input */
+  border: none; /* No border */
+  background-color: transparent; /* Transparent background */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+/* Remove decoration on focus */
+.title-input:focus {
+  outline: none; /* Remove outline */
+  background-color: transparent; /* Keep background transparent */
+}
+
+/* App.css */
+.custom-editor-container {
+  border: 1px solid #ccc;
+  padding: 10px;
+  min-height: 300px; /* Ensures the editor is visible */
+}
+
+.title-input {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.title-input.focused {
+  border-color: #007bff;
+}
+
+
+.custom-editor-container iframe,
+.custom-editor-container img,
+.custom-editor-container video {
+  display: block;
+  max-width: 100%;
+  margin: 16px auto;
+}
+
+.circle-button {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: #E7F1E9 !important; /* Change color as needed */
+  color: #313030 !important;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  font-size: 20px;
+  margin-bottom: 10px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease; /* Adding transition for scaling effect */
+}
+
+/* Optional scaling effect on hover */
+.circle-button:hover {
+  transform: scale(1.1);
+}
+
+.menu-options {
+  /* position: absolute; */
+  bottom: 40px;
+  right: 10px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  width: 350px;
+  padding-left: 16px;
+
+}
+
+.menu-options h3 {
+  margin-top: 0;
+  /* margin-bottom: 10px; */
+  font-size: 14px;
+  color: #888;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+
+
+}
+
+
+
+.menu-icon {
+  font-size: 24px;
+  margin-right: 15px;
+}
+
+.menu-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-text strong {
+  font-size: 16px;
+}
+
+.menu-text small {
+  font-size: 12px;
+  color: #888;
+}
+
+.circle-button {
+  /* position: absolute; */
+  bottom: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .menu-item:hover {
+  background-color: #F7FCF9;
+  margin-right: 40px;
+} */
+
+.embed-title {
+  padding: 14px, 0px, 20px, 8px;
+  font-weight: 100;
+  margin-bottom: 80px;
+}
+
+.menu-flexed {
+  display: flex;
+  align-items: center;
+  padding: 5px
+  /* padding: 10px; */
+  /* justify-content: space-around; */
+}
+
+.menu-flexed:hover {
+  display: flex;
+  align-items: center;
+  background-color: #F7FCF9;
+}
+
+
+
+
+
