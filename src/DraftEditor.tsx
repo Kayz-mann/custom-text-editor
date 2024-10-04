@@ -254,7 +254,9 @@ const DraftEditor: React.FC<DraftEditorProps> = React.memo(
         />
 
         {/* Footer with word count */}
-        <div className="word-counter">{wordCount}/1000</div>
+        <div className="counter">
+          <div className="word-counter">{wordCount}/1000</div>
+        </div>
       </div>
     );
   }

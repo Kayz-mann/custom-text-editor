@@ -296,6 +296,17 @@
   color: #666;
 }
 
+.counter {
+  width: 95%; /* Ensures full width of the container */
+  padding: 18px; /* Add padding around the counter */
+  background-color: white; /* White background for the counter */
+  position: relative; /* Position relative to contain absolute children */
+  margin-top: 50px;
+  border-radius: 8px;
+  align-items: center;
+}
+
+
 /* .title-input.focused {
   outline: 2px solid #007BFF;
 } */
