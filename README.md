@@ -9,7 +9,7 @@ This project is a custom text editor built with React, TypeScript, and Vite. The
 - **Vite**: A fast build tool and development server.
 - **Jodit**: A WYSIWYG rich text editor used for the core editing features.
 
-hosted url for project: https://custom-text-editor-9de5-nah0p624c-kayzmanns-projects.vercel.app
+hosted url for project: [https://custom-text-editor-9de5-nah0p624c-kayzmanns-projects.vercel.app](https://custom-text-editor-28zywkzmm-kayzmanns-projects.vercel.app)
 
 ## Installation
 
