@@ -16,6 +16,6 @@ hosted url for project: [https://custom-text-editor-9de5-nah0p624c-kayzmanns-pro
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/custom-text-editor.git
+   git clone https://github.com/Kayz-mann/custom-text-editor.git
    cd custom-text-editor
    ```
